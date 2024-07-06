@@ -23,7 +23,7 @@ public class DtoMapperUser {
         return this;
     }
 
-    public UserDto build(){
+    public UserDto  build(){
 
         if( user == null){
             throw new RuntimeException("Debe pasar el entity User!");

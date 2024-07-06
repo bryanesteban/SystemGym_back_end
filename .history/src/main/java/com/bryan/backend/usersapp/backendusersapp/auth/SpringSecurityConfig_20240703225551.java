@@ -47,17 +47,12 @@ public class SpringSecurityConfig {
     @Bean
     SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         return http.authorizeHttpRequests()
-            
-            //Usuarios
             .requestMatchers(HttpMethod.GET, "/users").permitAll()
             .requestMatchers(HttpMethod.GET, "/users/{id}").hasAnyRole("USER", "ADMIN")
             .requestMatchers(HttpMethod.POST, "/users").hasAnyRole( "ADMIN")
             //.requestMatchers("/users/**").hasRole("ADMIN")
             .requestMatchers(HttpMethod.DELETE, "/users/{id}").hasAnyRole( "ADMIN")
             .requestMatchers(HttpMethod.PUT, "/users/{id}").hasAnyRole( "ADMIN")
-            //Clientes
-            .requestMatchers(HttpMethod.GET, "/clients").permitAll()
-            .requestMatchers(HttpMethod.GET, "/clients/{ci}").permitAll()
             .anyRequest().authenticated()
             .and()
             .addFilter(new JwtAuthenticationFilter(authenticationConfiguration.getAuthenticationManager()))
