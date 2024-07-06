@@ -64,7 +64,6 @@ public class ClientController {
     @PostMapping
     public ResponseEntity<?> createClient (@Valid @RequestBody Client client, BindingResult result)
     {
-            System.out.println("Antes de:"+client);
             if(result.hasErrors()){
                 return validation(result);
             }

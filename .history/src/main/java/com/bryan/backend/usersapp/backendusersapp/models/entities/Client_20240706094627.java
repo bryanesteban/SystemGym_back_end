@@ -27,35 +27,35 @@ public class Client {
 
     @NotBlank
     @Size(max = 30)
-    @Column(name = "name")
+    @Column(name = "name", unique = true)
     private String name;
 
     @NotBlank
     @Size(max = 30)
-    @Column(name = "last_name")
+    @Column(name = "last_name", unique = true)
     private String lastName;
 
     @NotBlank
     @Size(max = 50)
-    @Column(name = "email")
+    @Column(name = "email", unique = true)
     private String email;
 
     @NotBlank
     @Size(max = 20)
-    @Column(name = "phone_number")
+    @Column(name = "phone_number", unique = true)
     private String phone_number;
 
     @NotBlank
-    @Column(name = "inscription_date")
+    @Column(name = "date_begin", unique = true)
     private Date inscription_date;
 
     @NotBlank
-    @Column(name = "date_birthday")
+    @Column(name = "date_birthday", unique = true)
     private Date date_birthday;
 
 
     @Size(max = 200)
-    @Column(name = "address")
+    @Column(name = "address", unique = true)
     private String address;
 
     public String getIdentification() {

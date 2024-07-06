@@ -46,7 +46,7 @@ public class Client {
     private String phone_number;
 
     @NotBlank
-    @Column(name = "inscription_date")
+    @Column(name = "date_begin")
     private Date inscription_date;
 
     @NotBlank

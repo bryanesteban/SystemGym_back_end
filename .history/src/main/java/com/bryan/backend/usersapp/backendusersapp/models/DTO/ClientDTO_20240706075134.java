@@ -49,12 +49,12 @@ public class ClientDTO {
         this.name = name;
     }
 
-    public String getlastName() {
-        return lastName;
+    public String getLast_name() {
+        return last_name;
     }
 
-    public void setlastName(String last_name) {
-        this.lastName = last_name;
+    public void setLast_name(String last_name) {
+        this.last_name = last_name;
     }
 
     public String getEmail() {

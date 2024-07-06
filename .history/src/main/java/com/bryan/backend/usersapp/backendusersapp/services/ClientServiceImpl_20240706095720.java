@@ -56,10 +56,9 @@ public class ClientServiceImpl implements ClientService {
     }
 
     @Override
-    @Transactional
-    public ClientDTO saveClient(Client client) {
-        System.out.println("client:"+client);
-        return ClientDTO.build(clientRepository.save(client));
+    public ClientDTO save(Client client) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'save'");
     }
 
     @Override

@@ -13,7 +13,7 @@ public interface ClientService {
     Optional<ClientDTO> findByIdentificaction( String identification);
     List<ClientDTO> findByNameOrLast_name(String nameValue);
     
-    ClientDTO saveClient ( Client client);
+    ClientDTO save ( Client client);
 
     Optional<ClientDTO> update(ClientDTO client, String identification);
 

@@ -58,7 +58,7 @@ public class ClientServiceImpl implements ClientService {
     @Override
     @Transactional
     public ClientDTO saveClient(Client client) {
-        System.out.println("client:"+client);
+        System.out.println("palabra:"+client);
         return ClientDTO.build(clientRepository.save(client));
     }
 

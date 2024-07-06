@@ -14,7 +14,7 @@ public interface ClientRepository
 
        Optional<Client> findByIdentification(String identification);
 
-       List<Client> findByNameContainingOrLastNameContaining(String name, String lastName);
+       Optional<Client> findByLastName(String lastName);
         
 
 }

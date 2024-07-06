@@ -46,20 +46,19 @@ public class ClientServiceImpl implements ClientService {
     @Override
     public List<ClientDTO> findByNameOrLast_name(String nameValue) {
         
-        System.out.println("palabra clave:"+nameValue);
-        List<Client> clients = clientRepository.findByNameContainingOrLastNameContaining(nameValue, nameValue);
+
+        // List<Client> clients = 
         System.out.println("Respuesta:"+clients);
-        return clients
+        return clientRepository.findByNameOrLastName(nameValue, nameValue)
                 .stream()
                 .map(u -> ClientDTO.build(u))
                 .collect(Collectors.toList());
     }
 
     @Override
-    @Transactional
-    public ClientDTO saveClient(Client client) {
-        System.out.println("client:"+client);
-        return ClientDTO.build(clientRepository.save(client));
+    public ClientDTO save(Client client) {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'save'");
     }
 
     @Override

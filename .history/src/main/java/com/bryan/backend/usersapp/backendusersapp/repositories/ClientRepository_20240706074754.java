@@ -3,7 +3,7 @@ package com.bryan.backend.usersapp.backendusersapp.repositories;
 import org.springframework.data.repository.CrudRepository;
 import com.bryan.backend.usersapp.backendusersapp.models.entities.Client;
 
-
+import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 
@@ -14,7 +14,7 @@ public interface ClientRepository
 
        Optional<Client> findByIdentification(String identification);
 
-       List<Client> findByNameContainingOrLastNameContaining(String name, String lastName);
+       List<Client> findByNameOrLast_name(String name, String last_name);
         
 
 }

@@ -12,9 +12,9 @@ import java.util.Optional;
 public interface ClientRepository 
        extends CrudRepository<Client,Long> {
 
-       Optional<Client> findByIdentification(String identification);
+       Optional<Client> findByIdentificationContaining(String identification);
 
-       List<Client> findByNameContainingOrLastNameContaining(String name, String lastName);
+       List<Client> findByLastName(String lastName);
         
 
 }
