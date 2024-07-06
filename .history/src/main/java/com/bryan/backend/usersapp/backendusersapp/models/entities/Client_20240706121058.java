@@ -45,11 +45,11 @@ public class Client {
     @Column(name = "phone_number")
     private String phone_number;
 
-
+    @NotBlank
     @Column(name = "inscription_date")
     private Date inscription_date;
 
-
+    @NotBlank
     @Column(name = "date_birthday")
     private Date date_birthday;
 
