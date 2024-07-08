@@ -69,14 +69,6 @@ public class ClientController {
     {
 
             Optional<ClientDTO> clientExist = clientService.findByIdentificaction(client.getIdentification());
-
-            if(clientExist.isPresent()){
-                Map<String, String> errors = new HashMap<>(); 
-
-                    errors.put("duplicated", "La cedula "+client.getIdentification()+" se encuetra duplicada");    
-                return ResponseEntity.badRequest().body(errors);
-            }
-
             if(result.hasErrors()){
                 return validation(result);
             }
