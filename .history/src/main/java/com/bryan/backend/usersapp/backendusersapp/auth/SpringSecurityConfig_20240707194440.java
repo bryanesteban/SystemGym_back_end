@@ -61,7 +61,6 @@ public class SpringSecurityConfig {
             .requestMatchers(HttpMethod.GET, "/clients/find/{nameValue}").permitAll()
             .requestMatchers(HttpMethod.POST, "/clients").permitAll()
             .requestMatchers(HttpMethod.PUT, "/clients/{identification}").permitAll()
-            .requestMatchers(HttpMethod.DELETE, "/clients/{identification}").permitAll()
             .anyRequest().authenticated()
             .and()
             .addFilter(new JwtAuthenticationFilter(authenticationConfiguration.getAuthenticationManager()))

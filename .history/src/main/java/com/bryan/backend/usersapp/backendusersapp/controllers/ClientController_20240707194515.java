@@ -10,7 +10,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -20,7 +19,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bryan.backend.usersapp.backendusersapp.models.DTO.ClientDTO;
-import com.bryan.backend.usersapp.backendusersapp.models.DTO.UserDto;
 import com.bryan.backend.usersapp.backendusersapp.models.entities.Client;
 import com.bryan.backend.usersapp.backendusersapp.services.ClientService;
 
@@ -79,7 +77,7 @@ public class ClientController {
     }
 
     @PutMapping("/{identification}")
-    public ResponseEntity<?> updateClient(@Valid @RequestBody Client client, BindingResult result, @PathVariable (name="identification") String identification )
+    public ResponseEntity<?> updateClient(@Valid @RequestBody Client client, BindingResult result, @PathVariable String identification )
     {
         if(result.hasErrors()){
             return validation(result);
@@ -93,16 +91,6 @@ public class ClientController {
         return ResponseEntity.notFound().build();
     }
 
-    @DeleteMapping("/{identification}")
-    public ResponseEntity<?> removeClient(@PathVariable (name = "identification") String identification)
-    {
-        Optional<ClientDTO> o = clientService.findByIdentificaction(identification);
-        if(o.isPresent()){
-            clientService.remove(identification);
-            return ResponseEntity.noContent().build();
-        }
-            return ResponseEntity.notFound().build();
-    }
 
 
      private ResponseEntity<?> validation(BindingResult result) {

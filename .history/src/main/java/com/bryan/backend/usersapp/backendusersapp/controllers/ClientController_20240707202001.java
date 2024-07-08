@@ -20,7 +20,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bryan.backend.usersapp.backendusersapp.models.DTO.ClientDTO;
-import com.bryan.backend.usersapp.backendusersapp.models.DTO.UserDto;
 import com.bryan.backend.usersapp.backendusersapp.models.entities.Client;
 import com.bryan.backend.usersapp.backendusersapp.services.ClientService;
 
@@ -95,14 +94,7 @@ public class ClientController {
 
     @DeleteMapping("/{identification}")
     public ResponseEntity<?> removeClient(@PathVariable (name = "identification") String identification)
-    {
-        Optional<ClientDTO> o = clientService.findByIdentificaction(identification);
-        if(o.isPresent()){
-            clientService.remove(identification);
-            return ResponseEntity.noContent().build();
-        }
-            return ResponseEntity.notFound().build();
-    }
+
 
 
      private ResponseEntity<?> validation(BindingResult result) {

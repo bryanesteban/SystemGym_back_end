@@ -17,7 +17,7 @@ public interface ClientService {
 
     Optional<ClientDTO> update(Client client, String identification);
 
-    void remove(String identification );
+    void remove(String id );
 
 
 }

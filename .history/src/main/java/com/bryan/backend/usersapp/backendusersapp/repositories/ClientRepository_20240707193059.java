@@ -15,8 +15,7 @@ public interface ClientRepository
        Optional<Client> findByIdentification(String identification);
 
        List<Client> findByNameContainingOrLastNameContaining(String name, String lastName);
-       
-       void deleteByIdentification(String identification);
+
         
 
 }

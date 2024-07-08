@@ -85,7 +85,6 @@ public class ClientServiceImpl implements ClientService {
 
     @Override
     public void remove(String identification) {
-        System.out.println("Antes de:"+identification);
         clientRepository.deleteByIdentification(identification);
     }
 
