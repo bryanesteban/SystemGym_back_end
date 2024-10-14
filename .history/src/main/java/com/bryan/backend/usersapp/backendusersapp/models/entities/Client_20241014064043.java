@@ -66,5 +66,67 @@ public class Client {
     @Column(name = "address")
     private String address;
 
-    
+    public String getIdentification() {
+        return identification;
+    }
+
+    public void setIdentification(String identification) {
+        this.identification = identification;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getlastName() {
+        return lastName;
+    }
+
+    public void setlastName(String lastName) {
+        this.lastName = lastName;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public String getPhone_number() {
+        return phone_number;
+    }
+
+    public void setPhone_number(String phone_number) {
+        this.phone_number = phone_number;
+    }
+
+    public Date getInscription_date() {
+        return inscription_date;
+    }
+
+    public void setInscription_date(Date inscription_date) {
+        this.inscription_date = inscription_date;
+    }
+
+    public Date getDate_birthday() {
+        return date_birthday;
+    }
+
+    public void setDate_birthday(Date date_birthday) {
+        this.date_birthday = date_birthday;
+    }
+
+    public String getAddress() {
+        return address;
+    }
+
+    public void setAddress(String address) {
+        this.address = address;
+    }
 }

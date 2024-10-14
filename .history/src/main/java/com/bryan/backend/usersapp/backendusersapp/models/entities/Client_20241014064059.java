@@ -65,6 +65,4 @@ public class Client {
     @Size(max = 200)
     @Column(name = "address")
     private String address;
-
-    
 }

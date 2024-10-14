@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.bryan.backend.usersapp.backendusersapp.models.DTO.ClientDTO;
+import com.bryan.backend.usersapp.backendusersapp.models.DTO.UserDto;
 import com.bryan.backend.usersapp.backendusersapp.models.entities.Client;
 import com.bryan.backend.usersapp.backendusersapp.services.ClientService;
 

@@ -12,6 +12,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.bryan.backend.usersapp.backendusersapp.models.IUser;
 import com.bryan.backend.usersapp.backendusersapp.models.DTO.UserDTO;
+import com.bryan.backend.usersapp.backendusersapp.models.DTO.UserDto;
 import com.bryan.backend.usersapp.backendusersapp.models.DTO.mapper.DtoMapperUser;
 import com.bryan.backend.usersapp.backendusersapp.models.entities.Role;
 import com.bryan.backend.usersapp.backendusersapp.models.entities.User;

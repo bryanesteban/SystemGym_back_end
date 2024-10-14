@@ -61,4 +61,7 @@ public class User implements IUser {
 
     @Transient
     private boolean admin;
+
+   
+
 }

@@ -52,8 +52,7 @@ public class SpringSecurityConfig {
             .requestMatchers(HttpMethod.GET, "/users").permitAll()
             .requestMatchers(HttpMethod.GET, "/users/{id}").hasAnyRole("USER", "ADMIN")
             .requestMatchers(HttpMethod.POST, "/users").hasAnyRole( "ADMIN")
-            // .requestMatchers(HttpMethod.POST, "/users").permitAll()
-            // .requestMatchers("/users/**").hasRole("ADMIN")
+            //.requestMatchers("/users/**").hasRole("ADMIN")
             .requestMatchers(HttpMethod.DELETE, "/users/{id}").hasAnyRole( "ADMIN")
             .requestMatchers(HttpMethod.PUT, "/users/{id}").hasAnyRole( "ADMIN")
             //Clientes
